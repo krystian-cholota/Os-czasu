@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA Compatible" content="IE=edge, chrome=1, IE=11">
+        <title>Timeline</title>
+        <link href="css/timeline.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/timeline.js"></script>
+        <script type="text/javascript" src="js/tooltip.js"></script>
+    </head>
+    <body>
+        <div class="timeline">
+            <div class="timeline-progress"></div>
+        </div>
+
+        <script type="text/javascript">
+            var timeline = new Timeline(document.querySelector('.timeline'), new Date(2015,5,1,0,0,0), new Date(2015, 5, 30, 0, 0, 0));
+                            /* Aktualna data */
+            timeline.render(new Date(2015, 5, 14), [
+                // data wydarzenia, nazwa wydarzenia, ID dla ikony (według FontAwesome)
+                [ new Date(2015, 5, 2), 'Lorem ipsum dolor sit1', 'fa-heart' ],
+				        [ new Date(2015, 5, 11), 'Lorem ipsum dolor sit2', 'fa-flask' ],
+				        [ new Date(2015, 5, 15), 'Lorem ipsum dolor sit3', 'fa-gavel' ],
+                [ new Date(2015, 5, 22), 'Lorem ipsum dolor sit4', 'fa-graduation-cap' ],
+				        [ new Date(2015, 5, 30), 'Lorem ipsum dolor sit5', 'fa-trophy' ]
+            ]);
+        </script>
+    </body>
+</html>
